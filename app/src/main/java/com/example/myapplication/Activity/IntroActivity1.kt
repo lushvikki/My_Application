@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityIntroBinding
 import com.example.myapplication.MainActivity
 
-class IntroActivity1 : AppCompatActivity() {
+class IntroActivity1 : BaseActivity() {
 
     private lateinit var binding: ActivityIntroBinding
 
