@@ -10,49 +10,52 @@
         android:background="@color/lightPink"
         tools:context=".Activity.IntroActivity1">
 
+
         <LinearLayout
-            android:layout_width="250dp"
-            android:layout_height="217dp"
-            android:layout_marginBottom="4dp"
-            android:background="@drawable/intro1"
+            android:layout_width="413dp"
+            android:layout_height="107dp"
+            android:background="@drawable/white_buttom_corner_bg"
             android:orientation="vertical"
-            android:gravity="center"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:padding="16dp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent">
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
+                android:id="@+id/slogan"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Твое вдохновение - твой стиль"
-                android:textStyle="bold"
-                android:textSize="26sp"
+                android:layout_gravity="center_horizontal"
+                android:text="Красота – это ты"
                 android:textColor="@color/lightRed"
-                android:textAlignment="center"
-                />
+                android:textSize="45sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="265dp"
+            android:layout_height="158dp"
+            android:layout_marginBottom="412dp"
+            android:background="@drawable/introbtn"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.496"
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
                 android:id="@+id/startBtn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
                 android:text="Начать"
                 android:textAlignment="center"
                 android:textColor="@color/lightRed"
-                android:textStyle="bold"
-                android:textSize="20sp"
-                android:layout_marginTop="35dp"/>
-
+                android:textSize="40sp"
+                android:textStyle="italic" />
         </LinearLayout>
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="391dp"
-            android:layout_height="179dp"
-            android:layout_marginTop="88dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/introlab" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
