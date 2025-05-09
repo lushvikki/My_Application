@@ -1,12 +1,11 @@
-package com.example.myapplication
+package com.example.myapplication.Activity
 
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.myapplication.Activity.BaseActivity
 import com.example.myapplication.Adapter.KategoriaAdapter
+import com.example.myapplication.Adapter.NewAdapter
 import com.example.myapplication.ViewModel.MainViewModel
 import com.example.myapplication.databinding.ActivityMainBinding
 
@@ -20,6 +19,17 @@ class MainActivity : BaseActivity() {
         setContentView(binding.root)
 
         initКатегории()
+        initНовинки()
+    }
+
+    private fun initНовинки() {
+        binding.progressBarNew.visibility=View.VISIBLE
+        viewModel.новинки.observe(this, Observer {
+            binding.viewNew.layoutManager=
+                LinearLayoutManager(this@MainActivity,LinearLayoutManager.VERTICAL,false)
+            binding.viewNew.adapter=NewAdapter(it)
+            binding.progressBarNew.visibility=View.GONE
+        })
     }
 
     private fun initКатегории() {

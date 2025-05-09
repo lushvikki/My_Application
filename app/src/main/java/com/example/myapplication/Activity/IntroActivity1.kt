@@ -2,9 +2,7 @@ package com.example.myapplication.Activity
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityIntroBinding
-import com.example.myapplication.MainActivity
 
 class IntroActivity1 : BaseActivity() {
 
@@ -19,7 +17,7 @@ class IntroActivity1 : BaseActivity() {
 
         // Установка обработчика клика для кнопки
         binding.startBtn.setOnClickListener {
-            startActivity(Intent(this@IntroActivity1, MainActivity::class.java))
+            startActivity(Intent(this@IntroActivity1, SignUpActivity::class.java))
         }
     }
 }
