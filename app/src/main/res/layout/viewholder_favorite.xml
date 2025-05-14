@@ -17,6 +17,7 @@
         android:scaleType="centerInside"
         android:src="@drawable/newjewerly"
         android:background="@drawable/white_bg" />
+
     <ImageView
         android:id="@+id/deleteButton"
         android:layout_width="24dp"

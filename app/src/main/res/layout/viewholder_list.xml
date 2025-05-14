@@ -7,17 +7,43 @@
     android:padding="8dp"
     android:layout_margin="8dp"
     android:gravity="center"
+    android:background="@drawable/white_bg"
     android:elevation="2dp">
 
+    <!-- Верхняя панель с иконками -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/iconFav"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icons8__fav"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp" />
+
+        <ImageView
+            android:id="@+id/iconCart"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/icons8_cart"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="4dp"
+            android:layout_marginTop="4dp" />
+    </RelativeLayout>
+
+    <!-- Изображение товара -->
     <ImageView
         android:id="@+id/imageViewProduct"
         android:layout_width="160dp"
         android:layout_height="160dp"
         android:scaleType="centerInside"
         android:src="@drawable/newjewerly"
-        android:background="@drawable/white_bg" />
+        android:layout_marginTop="8dp" />
 
+    <!-- Название товара -->
     <TextView
         android:id="@+id/textViewProductName"
         android:layout_width="wrap_content"
@@ -30,6 +56,7 @@
         android:ellipsize="end"
         android:gravity="center_horizontal" />
 
+    <!-- Цена товара -->
     <TextView
         android:id="@+id/textViewProductPrice"
         android:layout_width="wrap_content"
@@ -40,4 +67,3 @@
         android:layout_marginTop="2dp"
         android:gravity="center_horizontal" />
 </LinearLayout>
-

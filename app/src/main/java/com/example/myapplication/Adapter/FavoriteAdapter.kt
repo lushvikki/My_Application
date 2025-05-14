@@ -1,6 +1,5 @@
 package com.example.myapplication.Adapter
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -8,28 +7,31 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.myapplication.Model.CartModel
+import com.example.myapplication.Model.FavoriteModel
 import com.example.myapplication.R
 
-class CartAdapter(
-    private val items: MutableList<CartModel>,
-    private val onDeleteClick: (CartModel) -> Unit // Передаем обработчик для удаления
-) : RecyclerView.Adapter<CartAdapter.CartViewHolder>() {
+class FavoriteAdapter(
+    private val items: MutableList<FavoriteModel>,
+    private val onDeleteClick: (FavoriteModel) -> Unit // Передаем обработчик для удаления
+) : RecyclerView.Adapter<FavoriteAdapter.FavoriteViewHolder>() {
 
-    inner class CartViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+    // ViewHolder для элемента списка
+    inner class FavoriteViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         val name: TextView = view.findViewById(R.id.textViewProductName)
         val price: TextView = view.findViewById(R.id.textViewProductPrice)
         val image: ImageView = view.findViewById(R.id.imageViewProduct)
         val deleteButton: ImageView = view.findViewById(R.id.deleteButton) // Кнопка удаления
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CartViewHolder {
+    // Создание нового ViewHolder для элемента
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FavoriteViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.viewholder_cart, parent, false)
-        return CartViewHolder(view)
+            .inflate(R.layout.viewholder_favorite, parent, false)
+        return FavoriteViewHolder(view)
     }
 
-    override fun onBindViewHolder(holder: CartViewHolder, position: Int) {
+    // Привязка данных к элементам списка
+    override fun onBindViewHolder(holder: FavoriteViewHolder, position: Int) {
         val item = items[position]
         holder.name.text = item.title
         holder.price.text = "${item.price}₽"
